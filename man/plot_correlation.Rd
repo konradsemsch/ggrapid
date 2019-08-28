@@ -5,7 +5,7 @@
 \title{Plot a correlation matrix of numerical variables}
 \usage{
 plot_correlation(df, method = "spearman", order = "alphabet",
-  label_size = 0.7, number_size = 0.9)
+  label_size = 0.7, number_size = 0.7)
 }
 \arguments{
 \item{df}{A data frame.}

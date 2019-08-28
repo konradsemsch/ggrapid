@@ -23,15 +23,8 @@ plot_correlation <- function(df,
                              method = "spearman",
                              order = "alphabet",
                              label_size = 0.7,
-                             number_size = 0.9
-                             ) {
-
-  ### Testing
-  # df <- credit_data
-  # method = "spearman"
-  # order = "hclust"
-  # label_size = 0.7
-  ###
+                             number_size = 0.7
+                             ){
 
   if (!is.data.frame(df))
     stop("object must be a data frame")
@@ -50,7 +43,7 @@ plot_correlation <- function(df,
 
   corrplot::corrplot(
     cor_mtx,
-    col = grDevices::colorRampPalette(c("#6666ff","white","#ff4c4c"))(200),
+    col = grDevices::colorRampPalette(c("#db685d", "white", "#01b289"))(50),
     order = order,
     tl.cex = label_size,
     addCoef.col = "black",

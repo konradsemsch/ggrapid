@@ -43,7 +43,7 @@ plot_correlation <- function(df,
 
   corrplot::corrplot(
     cor_mtx,
-    col = grDevices::colorRampPalette(c("#db685d", "white", "#01b289"))(50),
+    col = grDevices::colorRampPalette(c("#e84a5f", "white", "#4db69e"))(50),
     order = order,
     tl.cex = label_size,
     addCoef.col = "black",

@@ -36,7 +36,7 @@ devtools::install_github("konradsemsch/ggrapid")
 
 ## Simple examples
 
-```{r example}
+```{r fig.height=4, fig.width=7}
 library(tidyverse)
 library(ggrapid)
 
@@ -44,21 +44,21 @@ diamonds %>%
   plot_density(x = carat)
 ```
 
-```{r example}
+```{r}
 diamonds %>%
   plot_density(x = carat,
                fill = cut,
                position = "stack")
 ```
 
-```{r example}
+```{r}
 diamonds %>%
   plot_density(x = carat,
                fill = cut,
                position = "fill")
 ```
 
-```{r example}
+```{r}
 diamonds %>%
   plot_density(x = carat,
                fill = cut,

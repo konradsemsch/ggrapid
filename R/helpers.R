@@ -79,11 +79,11 @@ select_palette <- function(palette = "awtools"){
 
   } else if (palette == "binary") {
 
-    c("#01b289", "#db685d")
+    c("#4db69e", "#e84a5f")
 
   } else if (palette == "inv_binary") {
 
-    c("#db685d", "#01b289")
+    c("#e84a5f", "#4db69e")
 
   ### Continuous palettes
 

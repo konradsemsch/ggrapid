@@ -68,7 +68,7 @@ select_palette <- function(palette = "awtools"){
   if (!is.character(palette))
     stop("argument must be character")
 
-  if (!(palette %in% c("awtools", "berlin", "lajolla")))
+  if (!(palette %in% c("awtools", "binary", "inv_binary", "berlin", "lajolla")))
     stop("palette type not supported")
 
   ### Discrete palettes
@@ -76,6 +76,14 @@ select_palette <- function(palette = "awtools"){
   if (palette == "awtools") {
 
     paletteer::paletteer_d("awtools", "a_palette")
+
+  } else if (palette == "binary") {
+
+    c("#01b289", "#db685d")
+
+  } else if (palette == "inv_binary") {
+
+    c("#db685d", "#01b289")
 
   ### Continuous palettes
 

@@ -1,0 +1,5 @@
+test_that("output of ggplot() is stable", {
+  vdiffr::expect_doppelganger("A blank plot", ggplot())
+})
+
+change tidy-eval syntax in calculate_decile and other functions if there's still the old one

@@ -1,0 +1,31 @@
+Package: ggrapid
+Title: Create neat & complete ggplot visualizations with as little code as possible
+Version: 0.0.1.0
+Authors@R: person("Konrad", "Semsch", email = "konrad.semsch@gmail.com", role = c("aut", "cre"))
+Description: The ggrapid package enables creation of the most common ggplot-based visualizations fast and with just a few lines of code.
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 6.1.1
+Depends:
+    R (>= 3.6.0)
+Imports:
+    corrplot,
+    dplyr,
+    extrafont,
+    forcats,
+    formattable,
+    ggplot2,
+    glue,
+    grDevices,
+    hrbrthemes,
+    magrittr,
+    paletteer,
+    rlang,
+    scales,
+    stats,
+    tidyr
+Suggests:
+    testthat,
+    tidyverse,
+    vdiffr

@@ -1,0 +1,78 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, echo = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/",
+  warning = FALSE,
+  message = FALSE
+)
+```
+
+# ggrapid: Create neat & complete ggplot visualizations with as little code as possible
+
+ggrapid enables creation of the most common ggplot-based visualizations fast and with just a few lines of code. ggrapid comes handy when you'd like to do an initial and quick EDA over various columns of your dataset programatically, without the need of writing a lot of custom ggplot code.
+
+## Installation
+
+```{r, eval = FALSE}
+# Install development version from GitHub
+devtools::install_github("konradsemsch/ggrapid")
+```
+
+## Main functions
+
+* plot_density
+* plot_boxplot
+* plot_deciles
+* plot_correlation
+* plot_bars
+* plot_line
+
+## Simple examples
+
+```{r}
+library(tidyverse)
+library(ggrapid)
+
+diamonds %>%
+  plot_density(x = carat)
+```
+
+```{r}
+diamonds %>%
+  plot_density(x = carat,
+               fill = cut,
+               position = "stack")
+```
+
+```{r}
+diamonds %>%
+  plot_density(x = carat,
+               fill = cut,
+               position = "fill")
+```
+
+```{r}
+diamonds %>%
+  plot_density(x = carat,
+               fill = cut,
+               facet = cut,
+               title = "Write your title here",
+               subtitle = "Write your subtitle here",
+               caption = "Write your caption here",
+               lab_x = "Carat",
+               alpha = .5,
+               vline = 1)
+```
+
+## Complete usage
+
+```{r, eval = FALSE}
+
+```

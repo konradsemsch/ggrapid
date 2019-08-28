@@ -44,7 +44,8 @@ diamonds %>%
 ``` r
 diamonds %>%
   plot_boxplot(x = cut,
-               y = carat)
+               y = carat,
+               fill = cut)
 ```
 
 ![](man/figures/unnamed-chunk-4-1.png)<!-- -->

@@ -92,7 +92,7 @@ plot_line <- function(df,
     geom_hline(yintercept = hline, linetype = 2, size = 1, color = "#6E7B8B", alpha = .8) +
     ggtitle(
       label = if (title == TRUE) {
-        glue::glue("{rlang::quo_text(var_y)} by {rlang::quo_text(var_x)}")
+        glue::glue("{first_to_upper(rlang::quo_text(var_y))} by {rlang::quo_text(var_x)}")
       } else if (is.character(title)) {
         title
       } else {

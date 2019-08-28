@@ -19,7 +19,9 @@ knitr::opts_chunk$set(
 
 # ggrapid: Create neat & complete ggplot visualizations with as little code as possible
 
-ggrapid enables creation of the most common ggplot-based visualizations fast and with just a few lines of code. ggrapid comes handy when you'd like to do an initial and quick EDA over various columns of your dataset programatically, without the need of writing a lot of custom ggplot code.
+## Overview
+
+ggrapid enables creation of the most common ggplot-based visualizations fast and with just a few lines of code. ggrapid comes handy when you'd like to do an initial and quick EDA (Exploratory Data Analysis) over various columns of your dataset programatically, without the need of writing a lot of custom ggplot code.
 
 ## Installation
 

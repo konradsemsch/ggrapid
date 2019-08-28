@@ -71,7 +71,7 @@ calculate_decile_table <- function(df,
       top_level    = sum(.data$grouping_chr == top_level),
       total        = n(),
       bottom_level = .data$total - .data$top_level,
-      ratio        = .data$top_level / .data$total
+      ratio        = formattable::percent(.data$top_level / .data$total, 2)
     ) %>%
     ungroup() %>%
     mutate_at(vars(one_of(c("min", "median", "max"))), round, 2)

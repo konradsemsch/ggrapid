@@ -212,7 +212,7 @@ credit_data_nested <- credit_data %>%
 
 ```
 
-This will give you the following structure, where each row represents an individual variable and columns are the different plots you would like to inspect:
+This will give you the following structure. Each row represents an individual variable and columns are the different plots you would like to inspect:
 
 ```{r}
 credit_data_nested[1:3, ]
@@ -220,7 +220,7 @@ credit_data_nested[1:3, ]
 
 ## Exemplary EDA format
 
-Then creating a standardised EDA file is just as easy as doing something like this:
+Creating a standardised EDA file is just as easy as doing something like this:
 
 ### `r glue::glue("Variable: {credit_data_nested$variable[[1]]}")` {.tabset .tabset-fade .tabset-pills}
 

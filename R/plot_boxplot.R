@@ -139,7 +139,7 @@ plot_boxplot <- function(df,
           y = {{ y }}
         ),
         alpha = alpha,
-        fill = "#1d8fd2"
+        fill = "#019875"
       )
 
   } else {

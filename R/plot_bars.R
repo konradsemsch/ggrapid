@@ -176,7 +176,7 @@ plot_bars <- function(df,
           aes({{ x }}),
           alpha = alpha,
           stat = stat,
-          fill = "#1d8fd2",
+          fill = "#019875",
           position = position)
 
     } else {

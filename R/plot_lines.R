@@ -139,7 +139,7 @@ plot_line <- function(df,
           group = 1
         ),
         alpha = alpha,
-        color = "#1d8fd2"
+        color = "#019875"
       ) +
       geom_point(
         aes(

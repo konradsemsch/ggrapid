@@ -53,7 +53,8 @@ diamonds %>%
 ```{r}
 diamonds %>%
   plot_boxplot(x = cut,
-               y = carat)
+               y = carat,
+               fill = cut)
 ```
 
 #### Decile plot

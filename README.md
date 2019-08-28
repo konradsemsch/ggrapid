@@ -1,23 +1,6 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-    ## Registered S3 method overwritten by 'rvest':
-    ##   method            from
-    ##   read_xml.response xml2
-
-    ## ── Attaching packages ─────────────────────────────────── tidyverse 1.2.1 ──
-
-    ## ✔ ggplot2 3.2.1     ✔ purrr   0.3.2
-    ## ✔ tibble  2.1.3     ✔ dplyr   0.8.1
-    ## ✔ tidyr   0.8.3     ✔ stringr 1.4.0
-    ## ✔ readr   1.3.1     ✔ forcats 0.4.0
-
-    ## ── Conflicts ────────────────────────────────────── tidyverse_conflicts() ──
-    ## ✖ dplyr::filter() masks stats::filter()
-    ## ✖ dplyr::lag()    masks stats::lag()
-
-    ## Enjoy plotting!
-
 # ggrapid: Create neat & complete ggplot visualizations with as little code as possible
 
 ggrapid enables creation of the most common ggplot-based visualizations
@@ -45,7 +28,7 @@ in the course of doing an EDA:
   - `plot_bars`
   - `plot_line`
 
-<!-- end list -->
+#### Density plot
 
 ``` r
 diamonds %>%
@@ -54,6 +37,8 @@ diamonds %>%
 
 ![](man/figures/unnamed-chunk-3-1.png)<!-- -->
 
+#### Box-plot
+
 ``` r
 diamonds %>%
   plot_boxplot(x = cut,
@@ -61,6 +46,8 @@ diamonds %>%
 ```
 
 ![](man/figures/unnamed-chunk-4-1.png)<!-- -->
+
+#### Decile plot
 
 ``` r
 diamonds %>% 
@@ -71,12 +58,16 @@ diamonds %>%
 
 ![](man/figures/unnamed-chunk-5-1.png)<!-- -->
 
+#### Correlation
+
 ``` r
 diamonds %>%
   plot_correlation()
 ```
 
 ![](man/figures/unnamed-chunk-6-1.png)<!-- -->
+
+#### Barplot
 
 ``` r
 diamonds %>%
@@ -86,6 +77,8 @@ diamonds %>%
 ```
 
 ![](man/figures/unnamed-chunk-7-1.png)<!-- -->
+
+#### Lineplot
 
 ``` r
 tibble(
@@ -231,7 +224,7 @@ credit_data_nested <- credit_data %>%
 ```
 
 This will give you the following structure, where each row represents an
-individual variables and columns are the different plots you would like
+individual variable and columns are the different plots you would like
 to inspect:
 
 ``` r
@@ -246,10 +239,10 @@ credit_data_nested[1:3, ]
 
 ## Exemplary EDA format
 
-Then creating a standardised EDA file is just as easy as: doing
-something like this:
+Then creating a standardised EDA file is just as easy as doing something
+like this:
 
-### Seniority
+### Variable: Seniority
 
 #### Decile analysis
 
@@ -290,7 +283,7 @@ credit_data_nested$plot_density[[1]]
 
 ![](man/figures/unnamed-chunk-18-1.png)<!-- -->
 
-### Time
+### Variable: Time
 
 #### Decile analysis
 

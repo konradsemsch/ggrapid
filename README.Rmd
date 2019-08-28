@@ -4,7 +4,7 @@ output: github_document
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-```{r, echo = FALSE}
+```{r, echo = FALSE, message=FALSE, warning=FALSE}
 library(tidyverse)
 library(ggrapid)
 
@@ -39,16 +39,22 @@ ggrapid offers a couple wrappers around the most commonly used functions in the 
 * ```plot_bars```
 * ```plot_line```
 
+#### Density plot
+
 ```{r}
 diamonds %>%
   plot_density(x = carat)
 ```
+
+#### Box-plot
 
 ```{r}
 diamonds %>%
   plot_boxplot(x = cut,
                y = carat)
 ```
+
+#### Decile plot
 
 ```{r}
 diamonds %>% 
@@ -57,10 +63,14 @@ diamonds %>%
   plot_deciles()
 ```
 
+#### Correlation
+
 ```{r}
 diamonds %>%
   plot_correlation()
 ```
+
+#### Barplot
 
 ```{r}
 diamonds %>%
@@ -68,6 +78,8 @@ diamonds %>%
             x_type = "num",
             fill = cut)
 ```
+
+#### Lineplot
 
 ```{r}
 tibble(
@@ -198,7 +210,7 @@ credit_data_nested <- credit_data %>%
 
 ```
 
-This will give you the following structure, where each row represents an individual variables and columns are the different plots you would like to inspect:
+This will give you the following structure, where each row represents an individual variable and columns are the different plots you would like to inspect:
 
 ```{r}
 credit_data_nested[1:3, ]
@@ -206,9 +218,9 @@ credit_data_nested[1:3, ]
 
 ## Exemplary EDA format
 
-Then creating a standardised EDA file is just as easy as: doing something like this:
+Then creating a standardised EDA file is just as easy as doing something like this:
 
-### `r credit_data_nested$variable[[1]]` {.tabset .tabset-fade .tabset-pills}
+### `r glue::glue("Variable: {credit_data_nested$variable[[1]]}")` {.tabset .tabset-fade .tabset-pills}
 
 #### Decile analysis
 
@@ -230,7 +242,7 @@ credit_data_nested$plot_boxplot[[1]]
 credit_data_nested$plot_density[[1]]
 ```
 
-### `r credit_data_nested$variable[[2]]` {.tabset .tabset-fade .tabset-pills}
+### `r glue::glue("Variable: {credit_data_nested$variable[[2]]}")` {.tabset .tabset-fade .tabset-pills}
 
 #### Decile analysis
 

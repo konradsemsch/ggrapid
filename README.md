@@ -6,10 +6,12 @@
 ## Overview
 
 ggrapid enables creation of the most common ggplot-based visualizations
-fast and with just a few lines of code. ggrapid comes handy when you’d
-like to do an initial and quick EDA (Exploratory Data Analysis) over
-various columns of your dataset programatically, without the need of
-writing a lot of custom ggplot code.
+fast and with just a few lines of code. In practice the package offers
+wrappers of some of the most common ggplot geoms such as: geom\_density,
+geom\_boxplot, geom\_bar etc. ggrapid comes handy when you’d like to do
+an initial and quick EDA (Exploratory Data Analysis) over various
+columns of your dataset programatically, without the need of writing a
+lot of custom ggplot code.
 
 ## Installation
 
